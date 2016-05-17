@@ -1,0 +1,29 @@
+siph_pkg_deps()
+{
+    echo deps
+}
+
+siph_pkg_fetch()
+{
+    echo fetch
+}
+
+siph_pkg_configure()
+{
+    echo configure
+}
+
+siph_pkg_compile()
+{
+    echo compile
+}
+
+siph_pkg_test()
+{
+    echo test
+}
+
+siph_pkg_test()
+{
+    echo install
+}
