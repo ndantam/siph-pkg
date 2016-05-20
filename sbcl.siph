@@ -1,0 +1,21 @@
+SIPH_PKG_NAME="sbcl"
+SIPH_PKG_REPO="git://git.code.sf.net/p/sbcl/sbcl"
+SIPH_PKG_BRANCH="sbcl-1.3.4"
+
+SIPH_PKG_DEPS_DEB="sbcl time"
+
+siph_pkg_fetch() {
+    siph_fetch_git
+}
+
+siph_pkg_configure() { true; }
+
+siph_pkg_compile() {
+    sh make.sh --prefix="$SIPH_BLD_PREFIX"
+}
+
+siph_pkg_install() {
+    INSTALL_ROOT="$SIPH_BLD_DESTDIR/$SIPH_BLD_PREFIX" sh install.sh
+}
+
+siph_pkg_test() { true; }
