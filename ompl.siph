@@ -2,25 +2,10 @@ SIPH_PKG_NAME="ompl"
 SIPH_PKG_REPO="https://github.com/ompl/ompl.git"
 SIPH_PKG_BRANCH="c++11"
 
+SIPH_PKG_DEPS_DEB="cmake libboost-dev libboost-serialization-dev libboost-filesystem-dev libboost-system-dev libboost-program-options-dev libboost-test-dev"
+
 siph_pkg_fetch() {
     siph_fetch_git
 }
 
-siph_pkg_deps() { true; }
-
-siph_pkg_configure() {
-    cmake "$SIPH_BLD_SRCDIR" -DCMAKE_INSTALL_PREFIX="$SIPH_BLD_PREFIX"
-}
-
-siph_pkg_compile() {
-    make -j "$SIPH_MAKE_J"
-}
-
-siph_pkg_test() {
-    true
-    #make test
-}
-
-siph_pkg_install() {
-    make install DESTDIR="$SIPH_BLD_DESTDIR"
-}
+#siph_pkg_test() { true; }
