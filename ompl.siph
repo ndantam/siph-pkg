@@ -1,6 +1,6 @@
 SIPH_PKG_NAME="ompl"
 SIPH_PKG_REPO="https://github.com/ompl/ompl.git"
-SIPH_PKG_BRANCH="c++11"
+SIPH_PKG_BRANCH="1.2.1"
 
 SIPH_PKG_DEPS_DEB="libboost-dev libboost-serialization-dev libboost-filesystem-dev libboost-system-dev libboost-program-options-dev libboost-test-dev libeigen3-dev"
 
